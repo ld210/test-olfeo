@@ -4,23 +4,24 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## But du test
 Ecrire un formulaire avec les champs suivants :
-Nom (required)
 
-Prénom (required)
+- Nom (required)
 
-Adresse mail (required, validation de l'email)
+- Prénom (required)
 
-Mot de passe (required, validation du mot de passe: au moins 12 caractères, doit contenir majuscules, chiffres et un caractère spécial parmis @#&$%, les autres étant interdit)
+- Adresse mail (required, validation de l'email)
 
-Confirmation du mot de passe (required)
+- Mot de passe (required, validation du mot de passe: au moins 12 caractères, doit contenir majuscules, chiffres et un caractère spécial parmis @#&$%, les autres étant interdit)
 
-Adresse postale (required)
+- Confirmation du mot de passe (required)
 
-Possibilité d'ajouter dynamiquement d'autres adresses postales en cliquant sur un bouton
+- Adresse postale (required)
 
-L'envois du formulaire doit imprimer dans la console un payload (le payload qu'on enverrait à une api)
+- Possibilité d'ajouter dynamiquement d'autres adresses postales en cliquant sur un bouton
 
-Ecriture de jeu de test.
+- L'envois du formulaire doit imprimer dans la console un payload (le payload qu'on enverrait à une api)
+
+- Ecriture de jeu de test.
 
 Angular Material est disponible.
 
