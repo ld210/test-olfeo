@@ -5,11 +5,17 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## But du test
 Ecrire un formulaire avec les champs suivants :
 Nom (required)
+
 Prénom (required)
+
 Adresse mail (required, validation de l'email)
+
 Mot de passe (required, validation du mot de passe: au moins 12 caractères, doit contenir majuscules, chiffres et un caractère spécial parmis @#&$%, les autres étant interdit)
+
 Confirmation du mot de passe (required)
+
 Adresse postale (required)
+
 Possibilité d'ajouter dynamiquement d'autres adresses postales en cliquant sur un bouton
 
 L'envois du formulaire doit imprimer dans la console un payload (le payload qu'on enverrait à une api)
