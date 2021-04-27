@@ -1,0 +1,125 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "projects/**/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "project": [
+          "tsconfig.json"
+        ],
+        "createDefaultProgram": true
+      },
+      "extends": [
+        "plugin:@angular-eslint/recommended",
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:@angular-eslint/template/process-inline-templates"
+      ],
+      "rules": {
+        "@typescript-eslint/consistent-type-definitions": "error",
+        "@typescript-eslint/dot-notation": "off",
+        "@typescript-eslint/no-floating-promises": "off",
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": "error",
+        "@typescript-eslint/explicit-module-boundary-types": "error",
+        "@typescript-eslint/no-explicit-any": [
+          "error",
+          {
+            "fixToUnknown": true
+          }
+        ],
+        "@typescript-eslint/no-misused-promises": [
+          "error",
+          {
+            "checksVoidReturn": false
+          }
+        ],
+        "@typescript-eslint/explicit-member-accessibility": [
+          "off",
+          {
+            "accessibility": "explicit"
+          }
+        ],
+        "@typescript-eslint/unbound-method": [
+          "error",
+          {
+            "ignoreStatic": true
+          }
+        ],
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "selector": "memberLike",
+            "format": ["camelCase", "snake_case"]
+          },
+          {
+            "selector": ["property", "method"],
+            "modifiers": ["private"],
+            "format": ["camelCase", "snake_case"],
+            "leadingUnderscore": "require"
+          },
+          {
+            "selector": ["property"],
+            "modifiers": ["readonly"],
+            "format": ["camelCase", "snake_case", "PascalCase", "UPPER_CASE"]
+          },
+          {
+            "selector": "variable",
+            "format": ["camelCase", "snake_case", "UPPER_CASE"]
+          },
+          {
+            "selector": "variable",
+            "types": ["boolean"],
+            "format": ["camelCase", "PascalCase"],
+            "prefix": ["is", "has", "should", "can"]
+          },
+          {
+            "selector": "function",
+            "format": ["camelCase"]
+          },
+          {
+            "selector": "typeLike",
+            "format": ["PascalCase"]
+          },
+          {
+            "selector": "interface",
+            "format": ["PascalCase"],
+            "custom": {
+              "regex": "^I[A-Z]",
+              "match": false
+            }
+          }
+        ],
+        "brace-style": [
+          "error",
+          "1tbs"
+        ],
+        "id-blacklist": "off",
+        "id-match": "off",
+        "max-len": [
+          "error",
+          {
+            "code": 200
+          }
+        ],
+        "no-underscore-dangle": "off",
+        "no-prototype-builtins": "off"
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ],
+      "rules": {}
+    }
+  ]
+}
