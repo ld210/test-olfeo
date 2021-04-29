@@ -1,0 +1,53 @@
+<form
+  [formGroup]="formularGroup"
+  class="form"
+  fxLayout="column"
+  fxLayoutAlign="center center"
+  (ngSubmit)="onSubmit()"
+>
+  <mat-form-field appearance="outline">
+    <mat-label>Nom</mat-label>
+    <input formControlName="lastName" matInput required />
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Prénom</mat-label>
+    <input formControlName="firstName" matInput required />
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Adresse mail</mat-label>
+    <input formControlName="email" matInput required />
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Mot de passe</mat-label>
+    <input formControlName="password" matInput required type="password" />
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Confirmer mot de passe</mat-label>
+    <input
+      formControlName="passwordConfirm"
+      matInput
+      required
+      type="password"
+    />
+  </mat-form-field>
+  <div formArrayName="addresses" fxLayout="column">
+    <button mat-flat-button color="warn" type="button" (click)="addAddress()">
+      Ajouter nouvelle adresse
+    </button>
+    <mat-form-field
+      appearance="outline"
+      *ngFor="let adress of addresses.controls; let i = index"
+    >
+      <mat-label>Adresse postale</mat-label>
+      <input [formControlName]="i" matInput required />
+    </mat-form-field>
+  </div>
+  <button
+    mat-flat-button
+    color="primary"
+    type="submit"
+    [disabled]="!formularGroup.valid"
+  >
+    Envoyer
+  </button>
+</form>
